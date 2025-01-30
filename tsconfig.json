@@ -10,7 +10,9 @@
 		"skipLibCheck": true // this option will skip type checking all .d.ts files.
 	},
 	"ts-node": {
-		"esm": true
+		"esm": true,// Enables `ts-node` to work with ES Modules.
+    "transpileOnly": true, // Skip type checking, faster compilation.
+    "require": ["tsconfig-paths/register"] // Optional: resolves paths in your TypeScript config.
 	},
 	"include": ["backend/src/**/*"], // Specifies which files to include when compiling your project.
 	"exclude": ["node_modules", "**/*.spec.ts", "frontend"] // Specifies which files to exclude when compiling your project.
